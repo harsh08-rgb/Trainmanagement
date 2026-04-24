@@ -1,44 +1,28 @@
 public class trainmanagment {
 }
 
+public static void main(String[] args) {
 
-    public static void main(String[] args) {
+    System.out.println("======================================");
+    System.out.println(" UC17 - Sort Bogie Names Using Arrays.sort() ");
+    System.out.println("======================================\n");
 
-        System.out.println("======================================");
-        System.out.println("UC11 - Validate Train ID and Cargo Code");
-        System.out.println("======================================\n");
+    // Create array of bogie names
+    String[] bogieNames = {
+            "Sleeper", "AC Chair", "First Class", "General", "Luxury"
+    };
 
-        Scanner scanner = new Scanner(System.in);
+    // Display original array
+    System.out.println("Original Bogie Names:");
+    System.out.println(Arrays.toString(bogieNames));
 
-        // Accept input
-        System.out.print("Enter Train ID (Format: TRN-1234): ");
-        String trainId = scanner.nextLine();
+    // ---- SORT USING BUILT-IN METHOD ----
+    Arrays.sort(bogieNames);
 
-        System.out.print("Enter Cargo Code (Format: PET-AB): ");
-        String cargoCode = scanner.nextLine();
+    // Display sorted array
+    System.out.println("\nSorted Bogie Names (Alphabetical):");
+    System.out.println(Arrays.toString(bogieNames));
 
-        // Define regex patterns
-        String trainRegex = "TRN-\\d{4}";
-        String cargoRegex = "PET-[A-Z]{2}";
-
-        // Compile patterns
-        Pattern trainPattern = Pattern.compile(trainRegex);
-        Pattern cargoPattern = Pattern.compile(cargoRegex);
-
-        // Validate using matcher
-        Matcher trainMatcher = trainPattern.matcher(trainId);
-        Matcher cargoMatcher = cargoPattern.matcher(cargoCode);
-
-        boolean isTrainValid = trainMatcher.matches();
-        boolean isCargoValid = cargoMatcher.matches();
-
-        // Display results
-        System.out.println("\nValidation Results:");
-        System.out.println("Train ID Valid: " + isTrainValid);
-        System.out.println("Cargo Code Valid: " + isCargoValid);
-
-        System.out.println("\nUC11 validation completed...");
-
-        scanner.close();
-    }
+    System.out.println("\nUC17 sorting completed...");
+}
 }
