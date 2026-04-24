@@ -7,6 +7,6 @@ public class trainmanagment {
         System.out.println("Train Initialised Successfully");
         System.out.println("Initial bogie count : 0");
         System.out.println("Current Train Consist : []");
-        System.out.println("Systems ready for operations");
+        System.out.println("Systems ready for operationss");
     }
 }
