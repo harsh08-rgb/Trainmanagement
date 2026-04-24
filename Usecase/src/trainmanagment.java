@@ -1,12 +1,14 @@
 public class trainmanagment {
 }
     public static void main(String[] args) {
-        System.out.println("==================");
-        System.out.println("==Train Consist Management APP==");
-        System.out.println("==================");
-        System.out.println("Train Initialised Successfully");
-        System.out.println("Initial bogie count : 0");
-        System.out.println("Current Train Consist : []");
-        System.out.println("Systems ready for operationss");
+        List<String> PassengerBoogies=new ArrayList<>();
+        PassengerBoogies.add("Sleeper");
+        PassengerBoogies.add("AC Chair");
+        PassengerBoogies.add("First Class");
+        System.out.println(PassengerBoogies);
+        PassengerBoogies.remove("AC Chair");
+        System.out.println(PassengerBoogies);
+        System.out.println(PassengerBoogies.contains("Sleeper"));
+        System.out.println("Final Passenger train list : \n" +PassengerBoogies);
     }
 }
